@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="H2 - dinner;DB_CLOSE_DELAY=-1" uuid="c25418f2-8c06-4f77-a3bb-0de40943c963">
+    <database-info product="H2" version="1.3.176 (2014-04-05)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.3.176 (2014-04-05)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="DINNER"/>
+  </data-source>
+  <data-source name="MySQL - dinner@localhost" uuid="86c6881d-653d-4135-a8d8-63c4d499390a">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL">
+      <schema id="1" name="dinner"/>
+      <table id="2" parent="1" name="foods"/>
+      <table id="3" parent="1" name="items"/>
+      <table id="4" parent="1" name="machines"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <comment></comment>
+      </column>
+      <column id="6" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+        <comment></comment>
+      </column>
+      <column id="7" parent="2" name="item_name">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+        <comment></comment>
+      </column>
+      <column id="8" parent="2" name="machine_type_fk">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <comment></comment>
+      </column>
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <underlying-index></underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="10" parent="2" name="machine_fk">
+        <columns>machine_type_fk</columns>
+        <ref-key>machines.PRIMARY|id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="11" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <comment></comment>
+      </column>
+      <column id="12" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+        <comment></comment>
+      </column>
+      <column id="13" parent="3" name="exp_date">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+        <comment></comment>
+      </column>
+      <column id="14" parent="3" name="quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <comment></comment>
+      </column>
+      <key id="15" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <underlying-index></underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="16" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <comment></comment>
+      </column>
+      <column id="17" parent="4" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <comment></comment>
+      </column>
+      <key id="18" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <underlying-index></underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
