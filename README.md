@@ -14,4 +14,3 @@ Also DatabaseConfig class needs to be changed to load appropriate database confi
 ###NEW
 Added support for multi database support over abstraction of *JdbcProfile* and *JdbcDriver*. <br>Two profiles are defined: **dev** and **prod**.
 To use one of them, need to setup environment variable **runMode**
-###NEW
