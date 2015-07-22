@@ -2,7 +2,8 @@ package domain.items
 
 import org.joda.time.DateTime
 //import slick.driver.H2Driver.api._
-import slick.driver.MySQLDriver.api._
+//import slick.driver.MySQLDriver.api._
+import database.DatabaseProfile.profile.api._
 import com.github.tototoshi.slick.H2JodaSupport._
 
 

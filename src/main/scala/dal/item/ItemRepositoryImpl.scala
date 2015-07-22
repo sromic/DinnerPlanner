@@ -11,9 +11,11 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import com.github.tototoshi.slick.H2JodaSupport._
 
 //import slick.driver.H2Driver.api._
-import slick.driver.MySQLDriver.api._
+//import slick.driver.MySQLDriver.api._
 
 object ItemRepositoryImpl extends ItemRepository with Repositories {
+  import database.DatabaseProfile.profile.api._
+
   override def getExpiryItem: Future[Seq[String]] = {
     val expiredItems = (for {
       item <- itemsTable if item.quantity > 0

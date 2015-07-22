@@ -2,12 +2,12 @@ package domain.food
 
 import domain.machine.Machines
 //import slick.driver.H2Driver.api._
-import slick.driver.MySQLDriver.api._
+//import slick.driver.MySQLDriver.api._
+import database.DatabaseProfile.profile.api._
 
 case class Food(id: Option[Long], name: String, itemName: String, machineType: Long)
 
 class Foods(tag: Tag) extends Table[Food](tag, "foods") {
-
   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
   def name = column[String]("name", O.NotNull)
   def itemName = column[String]("item_name", O.NotNull)

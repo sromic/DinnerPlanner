@@ -1,7 +1,8 @@
 package domain.machine
 
 //import slick.driver.H2Driver.api._
-import slick.driver.MySQLDriver.api._
+//import slick.driver.MySQLDriver.api._
+import database.DatabaseProfile.profile.api._
 
 case class Machine(id: Option[Long], name: String)
 

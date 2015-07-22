@@ -4,13 +4,14 @@ import dal.Repositories
 import dal.item.ItemRepositoryImpl
 import domain.food.{Food, Foods}
 //import slick.driver.H2Driver.api._
-import slick.driver.MySQLDriver.api._
+//import slick.driver.MySQLDriver.api._
 
 import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 
 object FoodRepositoryImpl extends FoodRepository with Repositories {
+  import database.DatabaseProfile.profile.api._
 
   override def getFoodName: Future[Seq[String]] = {
     val foodNames = (for {

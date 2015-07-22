@@ -10,15 +10,18 @@ import domain.machine.{Machine, Machines}
 import message.Messages
 import org.joda.time.DateTime
 //import slick.driver.H2Driver.api._
-import slick.driver.MySQLDriver.api._
+//import slick.driver.MySQLDriver.api._
 
 import scala.concurrent.Future
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
 
 object Main extends App with DatabaseConfig with Repositories {
+import database.DatabaseProfile.profile.api._
 
   //try {
+  println(s"selected database is ${environment.Environment.environmentMode}")
+
     val items: TableQuery[Items] = Items.table
 
     val foods: TableQuery[Foods] = Foods.table
