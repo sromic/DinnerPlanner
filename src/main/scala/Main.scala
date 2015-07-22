@@ -51,7 +51,6 @@ import database.DatabaseProfile.profile.api._
 
     )
 
-  println(setup)
     //println SQL statement for creating tables
     //(machines.schema ++ items.schema ++ foods.schema).createStatements.foreach(println)
     //fill up database with some test data
