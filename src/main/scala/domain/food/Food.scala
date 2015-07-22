@@ -3,9 +3,6 @@ package domain.food
 import domain.machine.Machines
 //import slick.driver.H2Driver.api._
 import slick.driver.MySQLDriver.api._
-/**
- * Created by sromic on 13/07/15.
- */
 
 case class Food(id: Option[Long], name: String, itemName: String, machineType: Long)
 

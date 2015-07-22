@@ -3,9 +3,6 @@ package actor
 import akka.actor.{Actor, ActorLogging}
 import message.Messages.{Prepare, Prepared}
 
-/**
- * Created by simun on 16.7.2015..
- */
 class MicrowaveActor extends Actor with ActorLogging {
   override def receive: Receive = {
     case Prepare(foodName) =>

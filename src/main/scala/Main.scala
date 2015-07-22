@@ -15,9 +15,7 @@ import slick.driver.MySQLDriver.api._
 import scala.concurrent.Future
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
-/**
-  * Created by sromic on 15/07/15.
- */
+
 object Main extends App with DatabaseConfig with Repositories {
 
   //try {

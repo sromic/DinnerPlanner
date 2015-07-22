@@ -7,9 +7,6 @@ import message.Messages._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-/**
- * Created by simun on 16.7.2015..
- */
 class FridgeActor extends Actor with ActorLogging {
   override def receive: Receive = {
     case ExpiredItems =>

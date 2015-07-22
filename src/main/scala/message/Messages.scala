@@ -1,8 +1,5 @@
 package message
 
-/**
- * Created by simun on 16.7.2015..
- */
 object Messages {
   //Ask Fridge actor for getting soon expired items
   case object ExpiredItems
@@ -15,7 +12,9 @@ object Messages {
   //ask Store actor to order missing items
   case class MissingItems(items: Seq[String])
 
+  //when all items for selected food are available, decrese quantity for that items
   case class RemoveItemsFromFridge(foodName: String)
+  //response message from FridgeActor to MainActor when selected food's items quantities are decreased
   case object ItemsRemovedSuccessful
 
   //Response message from Fridge actor

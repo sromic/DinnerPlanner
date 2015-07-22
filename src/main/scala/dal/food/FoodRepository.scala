@@ -5,9 +5,6 @@ import domain.food._
 
 import scala.concurrent.Future
 
-/**
- * Created by sromic on 15/07/15.
- */
 trait FoodRepository extends DatabaseConfig {
   /**
    * for given food return it's items

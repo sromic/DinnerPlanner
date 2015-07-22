@@ -5,9 +5,6 @@ import org.joda.time.DateTime
 import slick.driver.MySQLDriver.api._
 import com.github.tototoshi.slick.H2JodaSupport._
 
-/**
- * Created by sromic on 14/07/15.
- */
 
 case class Item(id: Option[Long] = None, name: String, expDate: DateTime, quantity: Int)
 

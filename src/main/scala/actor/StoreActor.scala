@@ -6,9 +6,6 @@ import message.Messages.{Bought, MissingItems}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-/**
- * Created by simun on 16.7.2015..
- */
 class StoreActor extends Actor with ActorLogging {
   override def receive: Receive = {
     case MissingItems(items) =>
